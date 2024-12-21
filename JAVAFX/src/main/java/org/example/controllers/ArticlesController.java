@@ -132,7 +132,6 @@ public class ArticlesController {
         Dialog<Article> dialog = new Dialog<>();
         dialog.setTitle("Créer un nouvel article");
 
-        // Créer les champs de saisie
         TextField libelleField = new TextField();
         libelleField.setPromptText("Libellé");
 
@@ -142,11 +141,10 @@ public class ArticlesController {
         TextField qteStockField = new TextField();
         qteStockField.setPromptText("Quantité en stock");
 
-        // Créer un conteneur pour les champs de saisie
-        VBox dialogPaneContent = new VBox(10); // 10 pixels d'espacement
+       
+        VBox dialogPaneContent = new VBox(10);
         dialogPaneContent.getChildren().addAll(libelleField, prixField, qteStockField);
 
-        // Ajouter le contenu au DialogPane
         dialog.getDialogPane().setContent(dialogPaneContent);
 
         ButtonType createButtonType = new ButtonType("Créer", ButtonBar.ButtonData.OK_DONE);
