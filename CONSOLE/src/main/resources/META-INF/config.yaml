@@ -1,0 +1,14 @@
+persistence:
+  unit: PostgresDettes
+client:
+  type: JPA  # Options: JPA, DB, LIST
+user:
+  type: JPA  # Options: JPA, DB, LIST
+article:
+  type: JPA  # Options: JPA, DB, LIST  
+dept:
+  type: JPA  # Options: JPA, DB, LIST  
+detail:
+  type: JPA  # Options: JPA, DB, LIST  
+paiement:
+  type: JPA  # Options: JPA, DB, LIST  

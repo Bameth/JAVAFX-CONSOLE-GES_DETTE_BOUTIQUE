@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.UserController">
+    <TextField fx:id="surnameField" promptText="Nom" />
+    <TextField fx:id="phoneField" promptText="Téléphone" />
+    <TextField fx:id="addressField" promptText="Adresse" />
+    
+    <CheckBox fx:id="createUserCheckBox" text="Créer un utilisateur" />
+    
+    <TextField fx:id="nameField" promptText="Nom d'utilisateur" visible="false" />
+    <TextField fx:id="loginField" promptText="Login" visible="false" />
+    <PasswordField fx:id="passwordField" promptText="Mot de passe" visible="false" />
+    <ComboBox fx:id="roleComboBox" promptText="Choisir un rôle" visible="false">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <Role>USER</Role>
+                <Role>ADMIN</Role>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    
+    <Button text="Créer" onAction="#handleCreateClient"/>
+    <Button text="Annuler" onAction="#handleCancel"/>
+</VBox>

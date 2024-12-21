@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="org.example.controllers.DetteController">
+    <VBox spacing="10" prefWidth="800" prefHeight="600" style="-fx-padding: 10;">
+        <!-- Informations Client -->
+        <HBox spacing="10">
+            <TextField fx:id="phoneField" promptText="Téléphone" />
+            <TextField fx:id="clientNameField" promptText="Nom complet" editable="false" />
+            <TextField fx:id="addressField" promptText="Adresse" editable="false" />
+            <Button text="Rechercher" onAction="#searchClientByPhone" />
+        </HBox>
+
+        <!-- Ajout d'article -->
+        <HBox spacing="10">
+            <ComboBox fx:id="articleComboBox" promptText="Choisir un article" onAction="#populateArticlePrice" />
+            <TextField fx:id="priceField" promptText="Prix" editable="false" />
+            <TextField fx:id="quantityField" promptText="Quantité" />
+            <Button text="Ajouter" fx:id="addButton" onAction="#addArticleToOrder" />
+        </HBox>
+
+        <!-- Tableau des articles -->
+        <TableView fx:id="orderTable" prefHeight="300">
+            <columns>
+                <TableColumn text="Article" fx:id="articleColumn" />
+                <TableColumn text="Prix" fx:id="priceColumn" />
+                <TableColumn text="Quantité" fx:id="quantityColumn" />
+                <TableColumn text="Montant" fx:id="amountColumn" />
+                <TableColumn text="Actions" fx:id="actionColumn" />
+            </columns>
+        </TableView>
+
+        <!-- Résumé et validation -->
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Label text="Total:" />
+            <TextField fx:id="totalField" editable="false" />
+            <Button text="Valider la Dette" fx:id="validateButton" onAction="#validateDebt" />
+        </HBox>
+    </VBox>
+</AnchorPane>
