@@ -36,20 +36,19 @@ public class CreateDebtController {
 
     @FXML
     public void initialize() {
-        // Charger les clients dans le ComboBox
+        
         loadClients();
 
-        // Initialiser les états de la dette
+        
         debtStateComboBox.getItems().addAll("Non payé", "Payé", "En retard");
         debtStateComboBox.setValue("Non payé");
 
-        // Gestion de l'action du bouton "Créer la dette"
+    
         createDebtButton.setOnAction(event -> handleCreateDebt());
     }
 
     private void loadClients() {
-        // Charger la liste des clients dans le ComboBox
-        // Par exemple, on pourrait récupérer la liste des clients via un service
+       
         clientComboBox.getItems()
                 .setAll(deptService.findAll().stream().map(Dept::getClient).collect(Collectors.toList()));
     }
