@@ -282,8 +282,6 @@ public class AdminController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/path/to/usersView.fxml"));
             Parent root = loader.load();
-
-            // Assurez-vous d'initialiser la nouvelle scène avec la racine chargée
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
