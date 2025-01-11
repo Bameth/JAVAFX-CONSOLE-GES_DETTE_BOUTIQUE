@@ -200,7 +200,7 @@ mvn exec:java
 
 /controllers : Gestion des interactions avec XML
 
-/META-INF: Interface JAVAFX
+/ressources/META-INF: Interface JAVAFX
 
 👨‍💻 Auteur
 
